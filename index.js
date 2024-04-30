@@ -39,7 +39,7 @@ characters.forEach((character) => {
   characterCard.innerHTML = `
   <img src ="${}" alt="" class= "">`
 // finish card details here 
-  document.body.append(characterCard);
+  cardContainer.appendChild(characterCard);
   // append correctly 
-
+createCharacterCard()
 });
