@@ -14,11 +14,8 @@ export function createCharacterCard() {
   // img element
   const cardImage = document.createElement("img");
   cardImage.setAttribute("class", "card__image-container");
-  cardImage.setAttribute(
-    "src",
-    "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
-  );
-  cardImage.setAttribute("alt", "Max Musterfrau");
+  cardImage.setAttribute("src", `${character.image}`);
+  cardImage.setAttribute("alt", `${character.name}`);
   cardImageContainer.append(cardImage);
 
   // div img gradient
@@ -34,7 +31,7 @@ export function createCharacterCard() {
   // h2 card title
   const cardTitle = document.createElement("h2");
   cardTitle.setAttribute("class", "card__title");
-  cardTitle.textContent = "Max Mustermann";
+  cardTitle.textContent = `${character.name}`;
   cardContent.append(cardTitle);
 
   // dl card Info
@@ -45,7 +42,7 @@ export function createCharacterCard() {
   // dt card info status title
   const cardInfoStatusTitle = document.createElement("dt");
   cardInfoStatusTitle.setAttribute("class", "card__info-title");
-  cardInfoStatusTitle.textContent = "Status";
+  cardInfoStatusTitle.textContent = `${character.status}`;
   cardInfo.append(cardInfoStatusTitle);
 
   // dd card info status description
@@ -56,7 +53,7 @@ export function createCharacterCard() {
   // dt card info type title
   const cardInfoTypeTitle = document.createElement("dt");
   cardInfoTypeTitle.setAttribute("class", "card__info-title");
-  cardInfoTypeTitle.textContent = "Type";
+  cardInfoTypeTitle.textContent = `${character.type}`;
   cardInfo.append(cardInfoTypeTitle);
 
   // dd card info type description
@@ -67,7 +64,7 @@ export function createCharacterCard() {
   // dt card info occurences title
   const cardInfoOccurencesTitle = document.createElement("dt");
   cardInfoOccurencesTitle.setAttribute("class", "card__info-title");
-  cardInfoOccurencesTitle.textContent = "Occurences";
+  cardInfoOccurencesTitle.textContent = `${character.occurences}`;
   cardInfo.append(cardInfoOccurencesTitle);
 
   // dd card info occurences description
