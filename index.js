@@ -15,12 +15,30 @@ const maxPage = 1;
 const page = 1;
 const searchQuery = "";
 
+nextButton.addEventListener("click", () => {
+  if (page < maxPage) {
+    page++;
+    fetchCharacters();
+  }
+});
+
+prevButton.addEventListener("click", () => {
+  if (page > 1) {
+    page--;
+    fetchCharacters();
+  }
+});
+
 async function fetchCharacters() {
   try {
-    const response = await fetch("https:rickandmortyapi.com/api/character");
+    const response = await fetch(
+      `https:rickandmortyapi.com/api/character?page=${page}`
+    );
 
     if (response.ok) {
       const data = await response.json();
+      maxPage = data.info.pages;
+      pagination.textContent = `${page} / ${maxPage}`;
       return data;
     } else {
       console.error("Bad Response");
