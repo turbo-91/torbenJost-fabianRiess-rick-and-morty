@@ -1,6 +1,6 @@
 const cardContainer = document.querySelector('[data-js="card-container"]');
 
-export function createCharacterCard() {
+export function createCharacterCard(character) {
   // li element
   const card = document.createElement("li");
   card.setAttribute("class", "card");
@@ -64,11 +64,12 @@ export function createCharacterCard() {
   // dt card info occurences title
   const cardInfoOccurencesTitle = document.createElement("dt");
   cardInfoOccurencesTitle.setAttribute("class", "card__info-title");
-  cardInfoOccurencesTitle.textContent = `${character.occurences}`;
+  cardInfoOccurencesTitle.textContent = `${character.episode.length}`;
   cardInfo.append(cardInfoOccurencesTitle);
 
   // dd card info occurences description
   const cardInfoOccurencesDescription = document.createElement("dd");
   cardInfoOccurencesDescription.setAttribute("class", "card__info-description");
   cardInfo.append(cardInfoOccurencesDescription);
+  return card;
 }
