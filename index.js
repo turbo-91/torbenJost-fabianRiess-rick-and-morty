@@ -30,7 +30,8 @@ async function fetchCharacters() {
   }
 }
 
-const characters = ["string", "of", "character", "names"];
+const characters = ["string", "of", "character", "names"]; //or document.getElementById
+characters.innerHTML = '';
 characters.forEach((character) => {
   const characterCard = document.createElement("div");
   //characterCard.textcontent = character;
@@ -40,4 +41,5 @@ characters.forEach((character) => {
 // finish card details here 
   document.body.append(characterCard);
   // append correctly 
+
 });
