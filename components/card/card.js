@@ -42,34 +42,37 @@ export function createCharacterCard(character) {
   // dt card info status title
   const cardInfoStatusTitle = document.createElement("dt");
   cardInfoStatusTitle.setAttribute("class", "card__info-title");
-  cardInfoStatusTitle.textContent = `${character.status}`;
+  cardInfoStatusTitle.innerText = "Status";
   cardInfo.append(cardInfoStatusTitle);
 
   // dd card info status description
   const cardInfoStatusDescription = document.createElement("dd");
   cardInfoStatusDescription.setAttribute("class", "card__info-description");
+  cardInfoStatusDescription.textContent = `${character.status}`;
   cardInfo.append(cardInfoStatusDescription);
 
   // dt card info type title
   const cardInfoTypeTitle = document.createElement("dt");
   cardInfoTypeTitle.setAttribute("class", "card__info-title");
-  cardInfoTypeTitle.textContent = `${character.type}`;
+  cardInfoTypeTitle.innerText = "Type";
   cardInfo.append(cardInfoTypeTitle);
 
   // dd card info type description
   const cardInfoTypeDescription = document.createElement("dd");
   cardInfoTypeDescription.setAttribute("class", "card__info-description");
+  cardInfoTypeDescription.textContent = `${character.type}`;
   cardInfo.append(cardInfoTypeDescription);
 
   // dt card info occurences title
   const cardInfoOccurencesTitle = document.createElement("dt");
   cardInfoOccurencesTitle.setAttribute("class", "card__info-title");
-  cardInfoOccurencesTitle.textContent = `${character.episode.length}`;
+  cardInfoOccurencesTitle.innerText = "Occurences";
   cardInfo.append(cardInfoOccurencesTitle);
 
   // dd card info occurences description
   const cardInfoOccurencesDescription = document.createElement("dd");
   cardInfoOccurencesDescription.setAttribute("class", "card__info-description");
+  cardInfoOccurencesDescription.textContent = `${character.episode.length}`;
   cardInfo.append(cardInfoOccurencesDescription);
   return card;
 }
