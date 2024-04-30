@@ -29,3 +29,15 @@ async function fetchCharacters() {
     console.error("An Error occurred");
   }
 }
+
+const characters = ["string", "of", "character", "names"];
+characters.forEach((character) => {
+  const characterCard = document.createElement("div");
+  //characterCard.textcontent = character;
+  //characterCard.classList.add('nameNeeded')
+  characterCard.innerHTML = `
+  <img src ="${}" alt="" class= "">`
+// finish card details here 
+  document.body.append(characterCard);
+  // append correctly 
+});
