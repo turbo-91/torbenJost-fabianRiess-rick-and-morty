@@ -2,17 +2,17 @@
   top: -5px;
   height: 140px;
   width: 100%;
-  padding-top: 15px;
+  padding: 20px;
   align-content: center;
   position: fixed;
-  background-color: white;
+  background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
 }
 
 .search-bar {
   padding: 10px 20px;
-  background-color: var(--color-secondary);
+  background-color: var(--color-tertiary);
   width: max-content;
   display: grid;
   grid-template-columns: 1fr 24px;

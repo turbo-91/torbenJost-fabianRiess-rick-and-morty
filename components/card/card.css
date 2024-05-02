@@ -6,10 +6,16 @@
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
+  padding: 20px;
 }
+
 .card {
   width: 300px;
   background-color: var(--color-secondary);
+}
+
+.card:hover {
+  background-color: var(--color-accent);
 }
 
 .card__info {
