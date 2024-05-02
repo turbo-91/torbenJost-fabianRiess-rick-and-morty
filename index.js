@@ -48,6 +48,7 @@ searchBar.addEventListener("submit", (event) => {
   event.preventDefault();
   searchQuery = searchBar.querySelector(".search-bar__input").value;
   fetchCharacters();
+  page = 1;
 });
 
 /* searchBar.addEventListener("submit", (event) => {
